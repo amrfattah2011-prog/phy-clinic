@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @php
-        $clinicSettings = \App\Models\ClinicSetting::getSettings();
+        $clinicSettings = new \App\Models\ClinicSetting([
+            'clinic_name' => 'عيادة',
+            'doctor_title' => 'استشاري العلاج الطبيعي',
+        ]);
+
+        try {
+            $clinicSettings = \App\Models\ClinicSetting::getSettings();
+        } catch (\Throwable $exception) {
+            report($exception);
+        }
     @endphp
     <title>تسجيل الدخول - {{ $clinicSettings->clinic_name }}</title>
     
