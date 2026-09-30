@@ -97,8 +97,8 @@
                         اسم المستخدم أو البريد الإلكتروني
                     </label>
                     <div class="relative">
-                        <input type="text" name="login" id="login" required autofocus
-                               value="{{ old('login', 'admin') }}"
+                           <input type="text" name="login" id="login" required autofocus
+                               value="{{ old('login') }}"
                                placeholder="مثال: admin أو د. أحمد"
                                class="w-full pl-3 pr-10 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition font-medium">
                         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
@@ -115,8 +115,7 @@
                         </label>
                     </div>
                     <div class="relative">
-                        <input type="password" name="password" id="password" required
-                               value="12345678"
+                           <input type="password" name="password" id="password" required
                                placeholder="••••••••"
                                class="w-full pl-3 pr-10 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition font-medium">
                         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
@@ -144,24 +143,6 @@
                 </div>
             </form>
 
-            <!-- Quick Demo Credentials Hint -->
-            <div class="mt-6 pt-5 border-t border-slate-100">
-                <span class="text-[11px] font-bold text-slate-500 block mb-2 text-center">حسابات تجريبية مهيأة مسبقاً (انقر للملء السريع):</span>
-                <div class="grid grid-cols-3 gap-2 text-center text-[10px]">
-                    <button type="button" onclick="fillLogin('admin', '12345678')" class="p-2 bg-slate-50 hover:bg-brand-50 hover:text-brand-700 rounded-xl border border-slate-200 transition font-bold text-slate-700">
-                        <span class="block">👑 المدير</span>
-                        <span class="font-mono text-[9px] text-slate-400">admin</span>
-                    </button>
-                    <button type="button" onclick="fillLogin('dr_sara', '12345678')" class="p-2 bg-slate-50 hover:bg-brand-50 hover:text-brand-700 rounded-xl border border-slate-200 transition font-bold text-slate-700">
-                        <span class="block">🩺 طبيبة</span>
-                        <span class="font-mono text-[9px] text-slate-400">dr_sara</span>
-                    </button>
-                    <button type="button" onclick="fillLogin('reception', '12345678')" class="p-2 bg-slate-50 hover:bg-brand-50 hover:text-brand-700 rounded-xl border border-slate-200 transition font-bold text-slate-700">
-                        <span class="block">📋 استقبال</span>
-                        <span class="font-mono text-[9px] text-slate-400">reception</span>
-                    </button>
-                </div>
-            </div>
         </div>
 
         <!-- Footer Note -->
@@ -170,11 +151,5 @@
         </p>
     </div>
 
-    <script>
-        function fillLogin(login, pass) {
-            document.getElementById('login').value = login;
-            document.getElementById('password').value = pass;
-        }
-    </script>
 </body>
 </html>
