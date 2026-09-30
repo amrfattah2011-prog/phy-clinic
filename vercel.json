@@ -14,6 +14,7 @@
     "APP_DEBUG": "false",
     "CACHE_STORE": "array",
     "SESSION_DRIVER": "cookie",
+    "SESSION_SECURE_COOKIE": "true",
     "QUEUE_CONNECTION": "sync",
     "LOG_CHANNEL": "stderr",
     "APP_CONFIG_CACHE": "/tmp/config.php",
